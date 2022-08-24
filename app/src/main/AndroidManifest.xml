@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myblocnote">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Principal">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ModifierNotes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myblocnote.mainpage" />
+        </activity>
+        <activity
+            android:name=".Details"
+            android:label="@string/title_activity_details"
+            android:parentActivityName=".mainpage"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myblocnote.mainpage" />
+        </activity>
+        <activity android:name=".Addnote">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mainpage" />
+        </activity>
+        <activity android:name=".mainpage" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Login" />
+    </application>
+
+</manifest>
